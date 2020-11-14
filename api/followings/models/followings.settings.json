@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "blogs",
+  "collectionName": "followings",
   "info": {
-    "name": "blog",
+    "name": "followings",
     "description": ""
   },
   "options": {
@@ -11,31 +11,21 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "tite": {
-      "type": "string",
-      "required": true,
-      "unique": true
+    "name": {
+      "type": "string"
     },
-    "body": {
-      "type": "richtext",
-      "required": true
-    },
-    "image": {
+    "avatarUrl": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "files",
         "images",
+        "files",
         "videos"
       ],
       "plugin": "upload",
       "required": false
     },
-    "href": {
-      "type": "string",
-      "required": false
-    },
-    "description": {
+    "htmlUrl": {
       "type": "string"
     }
   }
